@@ -6,7 +6,6 @@ Template made to do small projects
 - just let the .c source files at the root
 - just let the .h header files at the root
 - modify the Makefile to adapt it to your project
-- you can delete .placeholder files
 
 ## The Makefile
 - modify the name of the output
