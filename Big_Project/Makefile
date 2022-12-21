@@ -54,10 +54,10 @@ all: startall libdummy ${NAME} end # main rule of the makefile
 
 ${NAME}: start ${OBJS} endall  # main rule of the makefile
 	@printf "$(BOLD)--------------------\n$(RESET)"
-	@$(CC) -o $(NAME) $(OBJS) $(LIBS) $(HEADERS)  # compiling the main
+	@$(CC) -o $(NAME) $(OBJS) $(LIBS) $(INCLUDES)  # compiling the main
 
 .c.o:  # rule to compile every SRCS files
-	@${CC} ${FLAGS} -c $< -o ${<:.c=.o} -I ${INCLUDES} &&  printf "$(MAGENTA)$(PROJECT_NAME)$(RESET)$(BOLD) Compiling: $(notdir $<) \n$(RESET)"
+	@${CC} ${FLAGS} -c $< -o ${<:.c=.o} ${INCLUDES} &&  printf "$(MAGENTA)$(PROJECT_NAME)$(RESET)$(BOLD) Compiling: $(notdir $<) \n$(RESET)"
 	# compilation command to compile every c file in SRCS
 	@$(eval SOMETHING = 1)  # changing the variable to get the right message at the end
 
