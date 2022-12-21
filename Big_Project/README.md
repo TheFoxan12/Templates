@@ -8,6 +8,7 @@ Template made to do big projects with lots of src files, headers and some libs
 - put your static libraries into /lib
 - just copy paste the libraries directories into libs
 - modify the Makefile to adapt it to your project
+- you can delete .placeholder files
 
 ## The Makefile
 - modify the name of the output
